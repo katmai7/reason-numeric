@@ -1,0 +1,31 @@
+{
+  "name": "react-numeric",
+  "bsc-flags": [
+    "-bs-no-version-header",
+    "-bs-super-errors"
+  ],
+  "reason": {
+    "react-jsx": 2
+  },
+  "bs-dev-dependencies": [
+    "@glennsl/bs-jest"
+  ],
+  "bs-dependencies": [
+    "reason-react"
+  ],
+  "package-specs": [
+    "commonjs",
+    "es6-global"
+  ],
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    },
+    {
+      "dir": "__tests__",
+      "type": "dev"
+    }
+  ],
+  "refmt": 3
+}
