@@ -1,6 +1,6 @@
 import baseConfig from './rollup.config.base';
 import serve from 'rollup-plugin-serve';
-import jsx from 'rollup-plugin-jsx'
+import babel from 'rollup-plugin-babel';
 
 import { name } from './package.json';
 
@@ -9,13 +9,21 @@ export default {
   input: 'example/index.js',
   output: [{
     file: `example/temp/index.js`,
-    format: 'es',
+    format: 'umd',
     name,
     sourcemap: 'inline'
   }],
   plugins: [
+    babel({
+      babelrc: false,
+      presets: [
+        ['env', { modules: false }],
+        'react'
+      ],
+      exclude: 'node_modules/**'
+    }),
     ...baseConfig.plugins,
-    jsx({ factory: 'React.createElement' }),
+
     serve({
       port: 8080,
       contentBase: ['']

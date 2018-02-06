@@ -34,11 +34,13 @@ let make = (~onChange, ~value: string, _children) => {
       | UpdateValue(value) => (state => ReasonReact.Update({...state, value: value}))
       },
     render: ({ state, handle }) =>
-      <input
-        _type="tel"
-        value=state.value
-        onChange=(handle(handleChange))
-      />  
+      <div>
+        <input
+          _type="tel"
+          value=state.value
+          onChange=(handle(handleChange))
+        />  
+      </div> 
   }
 };
 

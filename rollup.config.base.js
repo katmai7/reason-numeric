@@ -5,7 +5,7 @@ import replace from 'rollup-plugin-replace';
 import bucklescript from 'rollup-plugin-bucklescript';
 
 export default {
-  input: 'lib/es6_global/src/index.js',
+  input: 'lib/js/src/index.js',
   plugins: [
     alias({
       resolve: ['.js']
