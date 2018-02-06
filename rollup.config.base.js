@@ -19,5 +19,6 @@ export default {
       // specifically include/exclude files
       include: ['node_modules/**', 'temp/**']
     })
-  ]
+  ],
+  external: ['react']
 }

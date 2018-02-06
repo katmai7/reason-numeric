@@ -34,8 +34,9 @@ let make = (~onChange, ~value: string, _children) => {
       | UpdateValue(value) => (state => ReasonReact.Update({...state, value: value}))
       },
     render: ({ state, handle }) =>
-      <div>
+      <div className="NumericControl">
         <input
+          className="NumericControl-input"
           _type="tel"
           value=state.value
           onChange=(handle(handleChange))
