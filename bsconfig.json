@@ -14,8 +14,7 @@
     "reason-react"
   ],
   "package-specs": [
-    "commonjs",
-    "es6-global"
+    "es6"
   ],
   "sources": [
     {

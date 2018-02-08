@@ -48,6 +48,7 @@ node_modules
 
 # Project specific stuff
 temp
+./example/temp
 typings
 .merlin
 /lib/*

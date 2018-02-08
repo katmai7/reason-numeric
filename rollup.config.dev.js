@@ -6,7 +6,7 @@ export default {
   ...baseConfig,
   output: [{
     file: `temp/${name}.js`,
-    format: 'cjs',
+    format: 'es',
     name,
     sourcemap: 'inline'
   }],
